@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <title>form</title>
+    <script defer src="contact.js">
+    </script>
+</head>
+<body>
+    <section class="back">
+        <header>
+            <nav>
+                <a href="home.html"><img src="logoo.png" class="logo"></a>
+                <div class="nav-bar" id="navbar">
+                    <i class="fa fa-times" onclick="hidemenu()"></i>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="pets.html">Pets</a></li>
+                        <li><a href="branches.html">Other Branches</a></li>
+                        <li><A HREF="contact us.html" TARGET="_blank">Contact us</a></li>
+                        <li><a href="about us.html">About us</a></li>
+                        <a href="log in.html" class="button" role="button">Log in / Sign in</a>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </header>  
+    </section>
+    <form id="form" action="/" method="get">
+        <div class="title">
+            <h2>Your information</h2>
+        </div>
+        <div class="half">
+            <div class="item">
+                <label for="name">Name</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div class="item">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+        </div>
+        <div class="full">
+            <label for="message">Your review</label>
+            <textarea name="message" id="message" name="message"></textarea>
+        </div>
+        <div class="action">
+            <button type="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
+        </div>
+        <div class="error"></div>
+    </form>
+
+</body>
+</html>
