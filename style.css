@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ysabeau', sans-serif;
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background: hsla(0, 75%, 69%, 0.69);
+    background-image: linear-gradient(rgba(94, 140, 99, 0.75),rgba(76, 69, 30, 0.75)),url(img1.png);
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    background:linear-gradient(rgba(94, 140, 99, 0.75),rgba(94, 140, 99, 0.75));
+    background:fixed;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-bar {
+
+ }
+nav img{
+    width: 105px;
+}
+.nav-bar{
+    flex: 1;/*occupy space*/
+    text-align:right;
+}
+.nav-bar ul li{
+    list-style: none; /*no bullet*/
+    display: inline-block; /*for the text to come horiontally*/
+    padding: 8px 12px; /*to add space*/
+    position: relative;
+}
+.nav-bar ul li a{ /*for the home menubar*/
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-bar ul li::after{ /*for the effect in the nav bar selection*/
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #afe543;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-bar ul li:hover::after{
+    width:100%;
+    
+}
+.text-box{
+    width:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*to make it in the center*/
+    text-align: center;
+    color: #fff
+}
+.text-box{
+    font-size: 60px;
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin:10px 0 40px; /*10from above 0 from left and right 40 from below*/
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.button{
+    width: 100px;
+    padding: 1px 0;
+    text-align: center;
+    margin: 40px 30px;
+    border-radius: 2px;
+    font-weight: bold;
+    border: 2px solid #0a8b4a;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+.button:hover{
+    border: 1px solid #16a7d3;
+    background: #16a7d3;
+    transition: 1s;
+}
+nav .fa{/*to hide the icons from the main desktop scale website*/
+    display: none;
+}
+@media(max-width: 700px){ /*to adopt the site into mobile compactible*/
+    .text-box h1{
+        font-size:20px;
+    }
+    .nav-bar ul li{
+        display:block;
+    }
+    .nav-bar{
+        position: absolute;
+        background: #16a7d3;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa{/*to show the icons in mobile view*/
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-bar ul{
+        padding: 30px;
+    }
+    .hero-btn{
+        height: 3vh;
+        width: 100px;
+        margin: 0;
+        padding: 15;
+    }
+}
+/*for button*/
+.hero-btn{
+    display:inline-block;
+    text-decoration: none;
+    color:aquamarine;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position:relative;
+    cursor:pointer;
+
+}
+.hero-btn:hover{
+    border: 1px solid #16a7d3;
+    background: #16a7d3;
+    transition: 1s;
+}
+nav .fa{/*to hide the icons from the main desktop scale website*/
+    display: none;
+}
+@media(max-width: 700px){ /*to adopt the site into mobile compactible*/
+    .text-box h1{
+        font-size:20px;
+    }
+    .nav-bar ul li{
+        display:block;
+    }
+    .nav-bar{
+        position: absolute;
+        background: #16a7d3;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa{/*to show the icons in mobile view*/
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-bar ul{
+        padding: 30px;
+    }
+    .hero-btn{
+        height: 3vh;
+        width: 100px;
+        margin: 0;
+        padding: 15;
+    }
+/*pet adoption page*/
+}   
+.pets{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.pet-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom:30px;
+    position: relative;
+    overflow:hidden;
+}
+.pet-col img{
+    width:100%;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top:300;
+    left:0;
+    transition:o.5s;
+}
+.layer:hover{
+
+}
+.layer h3{
+    width:100%;
+    font-weight:500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity:0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom:49%;
+    opacity: 1;
+
+}
+/*services*/
+.services{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top:100px;
+}
+.ser-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align:left;
+}
+.ser-col img{
+    width: 300px;
+    border-radius: 10px;
+}
+.ser-col p{
+    padding: 12;
+}
+.ser-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.location{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+h1{
+    font-size: 36px;
+    font-weight:600;
+}
+p{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.locat-col{
+    flex-basis:31%;
+    background:#c5bfbf;
+    border-radius: 10px;
+    margin-bottom:5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.locat-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+.contact{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(135, 94, 94, 0.7),rgba(230, 227, 193, 0.7)),url(dark.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius:10px;
+    text-align:center;
+    padding:100px 0;
+}
+.contact h1{
+    color:#fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .contact h1{
+        font-size: 24px;
+    }
+}
+/*footer*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color:#16a7d3;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+/*about us page*/
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img1.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
