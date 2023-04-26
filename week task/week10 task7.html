@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>week10 task7</title>
+  </head>
+  <body>
+    <script>
+        // Define table data
+var data = [
+  ["1", "Name1", "1.jpg"],
+  ["2", "Name1", "2.jpg"],
+  ["3", "Name1", "3.jpg"],
+  ["4", "Name1", "4.jpg"],
+  
+];
+
+// Define table header
+var header = ["S.N.", "Name", "Image"];
+
+// Start table
+document.write("<table>");
+
+// Display table header
+document.write("<tr>");
+for (var i = 0; i < header.length; i++) {
+  document.write("<th>" + header[i] + "</th>");
+}
+document.write("</tr>");
+
+// Display table data with alternating background colors on data rows
+for (var i = 0; i < data.length; i++) {
+  if (i % 2 == 0) {
+    document.write("<tr style='background-color: #f2f2f2;'>");
+  } else {
+    document.write("<tr>");
+  }
+  
+  for (var j = 0; j < data[i].length; j++) {
+    document.write("<td>" + data[i][j] + "</td>");
+  }
+  
+  document.write("</tr>");
+}
+
+// End table
+document.write("</table>");
+
+    </script>
+</body>
+</html>

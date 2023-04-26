@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: right;
+}
+
+.container {
+}
+
+.column {
+	flex: 1;
+	padding: 20px;
+}
+.percolumn{
+    display: flex;
+	flex-wrap: wrap;
+}
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+    bottom: 0px;
+}
+header ul{
+    list-style: none;
+}
+header ul li{
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(120, 120, 120);
+}
